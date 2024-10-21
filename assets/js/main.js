@@ -12,13 +12,18 @@ $(function() {
     //===== Sticky
 
     $(window).on('scroll', function (event) {
-        var scroll = $(window).scrollTop();
-        if (scroll < 20) {
-            $(".navbar-area").removeClass("sticky");
-            $(".navbar-area img").attr("src", "assets/images/logo.svg");
+        // Check if the current page is index.html
+        if (window.location.pathname.endsWith('index.html')) {
+            var scroll = $(window).scrollTop();
+            if (scroll < 20) {
+                $(".navbar-area").removeClass("sticky");
+                $(".navbar-area img").attr("src", "assets/images/logo-white.png");
+            } else {
+                $(".navbar-area").addClass("sticky");
+                $(".navbar-area img").attr("src", "assets/images/logo.png");
+            }
         } else {
-            $(".navbar-area").addClass("sticky");
-            $(".navbar-area img").attr("src", "assets/images/logo-2.svg");
+            $(".navbar-area img").attr("src", "assets/images/logo.png");
         }
     });
 
