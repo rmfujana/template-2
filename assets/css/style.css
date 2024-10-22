@@ -2592,7 +2592,13 @@ p {
 ===========================*/
 .portfolio-area {
   padding-top: 120px;
-  padding-bottom: 130px; }
+  padding-bottom: 130px; 
+}
+
+.portfolio-area.portfolio-area-product {
+  padding-top: 150px;
+  padding-bottom: 120px !important;
+}
 
 .portfolio-menu ul li {
   font-size: 16px;
@@ -2804,6 +2810,10 @@ p {
 /*===========================
        15.ABOUT css 
 ===========================*/
+
+.about-area.about-area-product {
+  background-color: #f4f6f7;
+}
 .about-area {
   padding-top: 80px;
   padding-bottom: 130px;

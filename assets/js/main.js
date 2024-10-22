@@ -13,7 +13,7 @@ $(function() {
 
     $(window).on('scroll', function (event) {
         // Check if the current page is index.html
-        if (window.location.pathname.endsWith('index.html')) {
+        if (window.location.pathname.endsWith('index.html')){
             var scroll = $(window).scrollTop();
             if (scroll < 20) {
                 $(".navbar-area").removeClass("sticky");
@@ -22,7 +22,9 @@ $(function() {
                 $(".navbar-area").addClass("sticky");
                 $(".navbar-area img").attr("src", "assets/images/logo.png");
             }
-        } else {
+        } else if (window.location.pathname.endsWith('product.html') ) {
+            // var scroll = $(window).scrollTop();
+            $(".navbar-area").addClass("sticky");
             $(".navbar-area img").attr("src", "assets/images/logo.png");
         }
     });
@@ -194,23 +196,15 @@ $(function() {
             scrollTop: 0,
         }, 1500);
     });
+
+    $('.card-header-location').on('click', function(e) {
+        e.preventDefault();
+        var mapData = $(this).attr('data-map');
+
+        $('#gmap_canvas').attr('src', mapData);
+        console.log(mapData);
+    });
     
     
     //===== 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 });
