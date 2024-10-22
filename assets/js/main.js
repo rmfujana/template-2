@@ -13,7 +13,11 @@ $(function() {
 
     $(window).on('scroll', function (event) {
         // Check if the current page is index.html
-        if (window.location.pathname.endsWith('index.html')){
+        if (window.location.pathname.endsWith('product.html')){
+            $(".navbar-area").addClass("sticky");
+            $(".navbar-area img").attr("src", "assets/images/logo.png");
+            
+        } else {
             var scroll = $(window).scrollTop();
             if (scroll < 20) {
                 $(".navbar-area").removeClass("sticky");
@@ -22,10 +26,6 @@ $(function() {
                 $(".navbar-area").addClass("sticky");
                 $(".navbar-area img").attr("src", "assets/images/logo.png");
             }
-        } else if (window.location.pathname.endsWith('product.html') ) {
-            // var scroll = $(window).scrollTop();
-            $(".navbar-area").addClass("sticky");
-            $(".navbar-area img").attr("src", "assets/images/logo.png");
         }
     });
 
